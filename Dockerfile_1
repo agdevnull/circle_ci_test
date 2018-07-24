@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-COPY test_file_1 /tmp/test_file_1
+MAINTAINER user_1 "user_1@example.com"
 
 RUN apt-get update && apt-get install -y python-pip
 RUN pip install requests
