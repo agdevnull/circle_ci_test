@@ -9,4 +9,4 @@ jobs:
           command: docker build -f Dockerfile_1 -t image_1:$CIRCLE_SHA1 .
       - run:
           name: build 2
-          command: docker build -f Dockerfile_2 -t image_2:$CIRCLE_SHA1 .
+          command: docker build --cache-from image_1:$CIRCLE_SHA1 -f Dockerfile_2 -t image_2:$CIRCLE_SHA1 .
