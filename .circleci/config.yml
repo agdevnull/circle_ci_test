@@ -6,7 +6,7 @@ jobs:
       - checkout
       - run:
           name: build 1
-          command: sudo docker -- build --squash -f Dockerfile_1 -t image_1:$CIRCLE_SHA1
+          command: sudo docker build --squash -f Dockerfile_1 -t image_1:$CIRCLE_SHA1
       - run:
           name: build 2
-          command: sudo docker -- build --squash -f Dockerfile_2 -t image_2:$CIRCLE_SHA1
+          command: sudo docker build --squash -f Dockerfile_2 -t image_2:$CIRCLE_SHA1
